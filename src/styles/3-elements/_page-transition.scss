@@ -1,0 +1,22 @@
+ul.transition {
+    //display: flex;
+    
+    position: absolute;
+    z-index: 10;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    pointer-events: none;
+    padding: 0;
+    margin: 0;
+
+    li{
+      list-style: none;
+      transform: scaleX(0);
+      background: $black;
+      width: 100vw;
+      height: 20%;
+    }
+  }

@@ -1,0 +1,19 @@
+// 1 - SETTINGS
+@import '1-settings/colors';
+@import '1-settings/fonts';
+@import '1-settings/typography';
+
+// 2 - TOOLS
+@import '2-tools/mixins';
+
+// 3 - ELEMENTS
+@import '3-elements/normalize';
+@import '3-elements/base';
+@import '3-elements/page-transition';
+@import '3-elements/preloader';
+
+// 4 - PAGES
+@import '5-pages/home';
+@import '5-pages/about';
+@import '5-pages/work';
+@import '5-pages/contact';

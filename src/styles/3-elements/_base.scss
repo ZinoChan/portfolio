@@ -1,0 +1,26 @@
+
+h1,
+h2,
+h3{
+    font-family: $heading-font;
+    color: inherit;
+}
+
+body{
+    font-family: $general-font;
+    &.dark{
+        background-color: $light-black;
+        color: $white;
+        p{color: $light-gray;}
+    }
+    &.light{
+        background-color: $white;
+        color: $black;
+        p{color: $light-black;}
+    }
+}
+
+section{
+    background-color: inherit;
+    overflow-x: hidden;
+}
