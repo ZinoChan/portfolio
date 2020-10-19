@@ -1,5 +1,5 @@
 import barba from '@barba/core';
-import { animation, pageTransition } from './js/main';
+import { homeAnimation, pageTransition } from './js/main';
 
 function delay(n) {
   return new Promise((done) => {
@@ -9,7 +9,7 @@ function delay(n) {
   });
 }
 
-barba.init({
+/*barba.init({
   sync: true,
   transitions: [
     {
@@ -27,3 +27,34 @@ barba.init({
     },
   ],
 });
+*/
+
+
+document.addEventListener('DOMContentLoaded', () => {
+barba.init({
+  sync: true,
+
+  transitions: [
+    {
+      async leave(data) {
+        pageTransition();
+        await delay(1000);
+        data.current.container.remove();
+    },
+    async beforeEnter(data) {
+      document.querySelector('.hamburger').classList.remove('is-active');
+    },
+    asy
+    },
+  ],
+views: [
+  {
+    namespace: 'home',
+    async afterEnter() {
+      homeAnimation();
+    },
+  },  
+]
+});
+});
+

@@ -1,0 +1,34 @@
+body{
+    font-family: $general-font;
+    transition: all .3s linear;
+    &.dark{
+        background-color: $light-black;
+        .home{background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+            url(../images/mountain.jpg);}
+        color: $white;
+        .logo{background-image: url(../images/light-logo.png);}
+        .theme-bg,
+        p::before{background-color: $white;}
+        .theme-text{color: $white;}
+        .hamburger-inner,
+        .hamburger-inner::after,
+        .hamburger-inner::before{
+            background-color: $white;
+        }
+
+    }
+    &.light{
+        background-color: $white;
+        color: $black;
+        .home{background: linear-gradient(to bottom, rgba(255, 255, 255,.9), rgba(255, 255, 255,.89)),
+            url(../images/mountain.jpg);}
+
+        .logo{background-image: url(../images/dark-logo.png);}
+        .theme-bg,
+        p::before{background-color: $black;}
+        .theme-text{color: $black;}
+        .hamburger-inner,
+        .hamburger-inner::after,
+        .hamburger-inner::before{background-color: $black;}
+    }
+}

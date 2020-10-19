@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/abbb59ce73.js" crossorigin="anonymous"></script>
   <title><%= htmlWebpackPlugin.options.title %></title>
 
 </head>
@@ -19,8 +20,55 @@
     <li></li>
   </ul>
 
+  <header class="header py-1 vw-100">
+   <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg d-flex px-0 justify-content-between">
+      <div class="logo"></div>
+      <div class="nav-toggler">
+        <button class="hamburger hamburger--vortex" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+      <ul class="main-nav d-flex flex-column justify-content-center align-items-center">
+        <li class="nav-item"><a href="#" class="nav-link ">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Work</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+   </div>
+  </header>
+
   <main data-barba="container" data-barba-namespace="home">
-        
+    <section class="home d-flex align-items-center min-vh-100 h-auto" id="home">
+      <div class="container-fluid position-relative vh-100 d-flex align-items-end">
+        <div class="home-title text-center position-absolute">
+          <h1 class="fade-down">Designer</h1>
+          <div class="line my-4"></div>
+          <h1 class="fade-up">Developer</h1>
+        </div>
+        <div class="mt-auto home-text w-100 d-flex justify-content-between align-items-center">
+          <p class="theme-text mb-3">
+            Hi, i’m Zineb a Front-end developer & 
+            designer.
+          </p>
+          <a href="work.html" class="btn main-btn">view my work</a>
+        </div>
+        <ul class="social-nav  position-absolute d-flex flex-column justify-content-between">
+          <li class="nav-item"><a href="#" class="nav-link theme-text"><i class="fab fa-github"></i></a></li>
+          <li class="nav-item"><a href="#" class="nav-link theme-text"><i class="fab fa-facebook-f"></i></a></li>
+          <li class="nav-item"><a href="#" class="nav-link theme-text"><i class="fab fa-instagram"></i></a></li>
+          <li class="nav-item"><a href="#" class="nav-link theme-text"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+        <span class="theme-text theme-toggler position-absolute"><i class="fas fa-sun"></i></span>
+      </div>
+      <div class="bubbles">
+        <span class="theme-bg"></span>
+        <span class="main-color"></span>
+      </div>
+    </section>   
   </main>
 
 </body>

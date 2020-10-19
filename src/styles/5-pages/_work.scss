@@ -1,0 +1,55 @@
+.work{
+    padding: 6rem 0;
+    .title{
+        margin-bottom: 4.5rem;
+
+        h1{font-size: 5rem;}
+
+        h3{
+            font-size: 3rem;
+            position: relative;
+            &::after,
+            &::before{
+                content: "";
+                width: 60px;
+                height: 3px;
+                background-color: $main-color;
+                top: 50%;
+                transform: translateY(-50%);
+                position: absolute;
+            }
+
+            &::after{right:28%;}
+
+            &::before{left: 28%;}
+        }
+    }
+
+    .work-img{
+        height: 500px;
+        background: #000;
+        margin-bottom: 2rem;
+    }
+
+    .work-info{
+        h2{
+            font-size: 2rem;
+            transition: all .2s linear;
+            margin-bottom: 3rem;
+        }
+
+        p{font-size: 1.6rem; margin-bottom: 2.5rem;}
+
+        span{
+            display: block;
+            font-size: 1.3rem;
+            text-transform: capitalize;
+            &::before{
+                content: "";
+                width: 40px;
+                height: 3px;
+                background-color: $main-color;
+            }
+        }
+    }
+}

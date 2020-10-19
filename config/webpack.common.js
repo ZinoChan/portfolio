@@ -33,8 +33,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Webpack Test',
       favicon: paths.static + '/favicon.png',
-      template: paths.src + '/about.html', 
-      filename: 'about.html', 
+      template: paths.src + '/work.html', 
+      filename: 'work.html', 
     }),
   ],
 

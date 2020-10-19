@@ -1,0 +1,41 @@
+.header{
+    z-index: 99;
+    position: fixed;
+    width: 100vw;
+    .logo{
+        width: 100px;
+        height: 100px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .nav-toggler{
+        z-index: 999;
+        button:focus{outline: none!important;}
+        .hamburger{
+            padding: 0!important;
+        }
+    }
+
+    .main-nav{
+        position: fixed;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: 99;
+        background-color: $main-color;
+        height: 0;
+
+        &.active{clip-path: circle(100%);}
+        
+        
+        .nav-link{
+            opacity: 0;
+            transform: translateY(100px);
+            font-size: 4rem;
+            color: $white;
+            font-family: $nunito_Xbold;
+        }
+    }
+}

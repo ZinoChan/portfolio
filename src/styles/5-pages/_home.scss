@@ -1,9 +1,120 @@
 #home{
-    h1{
-        font-size: 6rem;
-        line-height: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden!important;
+    position: relative;
+    color: inherit;
+    
+
+    .home-title{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        h1{font-size: 5.5rem; line-height: 1; margin: 0;}
+
+        .line{
+            width: 100%;
+            height: 6px;
+            background-color: $main-color;
+        }
     }
-    h2{
-        font-size: 4rem;
+
+    .home-text{
+        padding-bottom: 5rem;
+
+        p{
+            font-family: $nunito_Xbold;
+            font-size: 1.6rem;
+            position: relative;
+            padding-left: 20px;
+            &::before{
+                border-radius: 10px;
+                content: "";
+                height: 70%;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 4px;
+                left: 0;
+                position: absolute;
+            }
+        }
+    }
+
+
+
+    .bubbles{
+        span{
+            display: inline-block;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            z-index: 1;
+        }
+
+        
+        .main-color{
+            background-color: $main-color;
+            top: 15%;
+            right: -50px;
+        }
+
+        .theme-bg{
+            bottom: -50px;
+            left: -20px;
+        }
+    }
+
+    .social-nav{
+        right: 0;
+        top: 50%;
+        z-index: 2;
+        transform: translateY(-50%);
+        .nav-item{margin-bottom: 1rem;}
+        .nav-link{
+            font-size: 1.3rem;
+        }
+    }
+
+    .theme-toggler{
+       left: 0;
+       top: 47.5%;
+        font-size: 1.5rem;
+        i{display: inline-block; padding: .5rem 1rem;}
+    }
+}
+
+
+@include responsive_max(450px){
+    html {font-size: 14px;}
+
+        .home-title{
+            h1{font-size: 4rem!important;}
+        }
+
+        .home-text{
+            flex-direction: column!important;
+            align-items: flex-start!important;
+        }
+    
+}
+
+
+@include responsive_max(360px) {
+    .home-title{
+        h1{font-size: 3rem!important;}
+    }
+
+    .home-text {
+        position: relative;
+        z-index: 2;
+        padding-bottom: 2rem!important;
+        p{font-size: 1.3rem!important;}
+    }
+
+    .logo{
+        width: 70px!important;
+        height: 70px!important;
     }
 }

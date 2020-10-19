@@ -1,26 +1,42 @@
+body,
+html{overflow-x: hidden; width: 100vw;}
+
 
 h1,
 h2,
 h3{
     font-family: $heading-font;
     color: inherit;
+    line-height: 1;
 }
 
-body{
-    font-family: $general-font;
-    &.dark{
-        background-color: $light-black;
-        color: $white;
-        p{color: $light-gray;}
-    }
-    &.light{
-        background-color: $white;
-        color: $black;
-        p{color: $light-black;}
-    }
+
+section,main,header{
+    overflow-x: hidden!important;
+    width: 100vw;
 }
 
-section{
-    background-color: inherit;
-    overflow-x: hidden;
+.container-fluid{
+    max-width: 1600px;
+}
+
+.main-text{color: $main-color;}
+
+li{list-style-type: none;}
+
+a{text-decoration: none;}
+
+.btn {
+    font-family: $nunito_Xbold;
+}
+
+ul{padding: 0;
+margin: 0;}
+
+.main-btn{
+    color: $white;
+    background-color: $main-color;
+    border-radius: 8px;
+    padding: .5rem 1.6rem;
+    font-size: 1.3rem;
 }
