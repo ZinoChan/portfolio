@@ -10,20 +10,84 @@
   <title><%= htmlWebpackPlugin.options.title %></title>
 
 </head>
-<body data-barba="wrapper">
-    <ul class="transition">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+
+<body class="dark" data-barba="wrapper">
+  <ul class="transition">
+    <li class="theme-bg"></li>
+    <li class="theme-bg"></li>
+    <li class="theme-bg"></li>
+    <li class="theme-bg"></li>
+    <li class="theme-bg"></li>
+  </ul>
+
+  <header class="header py-1 vw-100">
+   <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg d-flex px-0 justify-content-between">
+      <div class="logo"></div>
+      <div class="nav-toggler">
+        <button class="hamburger hamburger--vortex" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+      <ul class="main-nav d-flex flex-column justify-content-center align-items-center">
+        <li class="nav-item"><a href="#" class="nav-link ">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Work</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
       </ul>
-    <main data-barba="container" data-barba-namespace="about">
-      <section class="about vh-100 d-flex flex-column justify-content-center align-items-center">
-        <h1>Welcome to About page</h1>
-        <a href="index.html" class="btn btn-danger">Home page</a> 
-      </section>       
-    </main>
+    </nav>
+   </div>
+  </header>
+
+  <main data-barba="container" data-barba-namespace="about">
+      <section class="about min-vh-100">
+        <div class="title text-center">
+          <h1>About.</h1>
+          <h3>A story About Me</h3>
+        </div>
+        <div class="container-fluid">
+          <div class="about-text w-50">
+            <p>
+              Hello my name is Zineb i'm a self-taught front-end developer and designer.
+              I'm from Morocco Benslimane. <br>
+              my journey to web development started back in 2018 when i watched a video tutorial on html and css. <br>
+              from there i took
+              the codecademy course on python (because lot of programmers said it's the best langauge for beginner), 
+              for two years i kept learnig from every resource i found  good and valuable and practice as much as possible. <br>
+              There is still alot to learn in this vast domain and i'm willing to learn more and discover more so  i 
+              become a better front-end developers designer and even a full stack developer. 
+            </p>
+          </div>
+          <div class="skills w-50 ml-auto ">
+            <h3>My Skills:</h3>
+            <div class="row">
+              <div class="col-xl-4">
+                <p>Html / css</p>
+                <p>Scss</p>
+                <p>Javascript</p>
+                <p>Typescript</p>
+              </div>
+              <div class="col-xl-4">
+                <p>Bootstrap</p>
+                <p>Materlize</p>
+                <p>Webpack</p>
+                <p>React js</p>
+              </div>
+              <div class="col-xl-4">
+                <p>Redux</p>
+                <p>Firebase</p>
+                <p>Figma</p>
+                <p>Webflow</p>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </section>
+
+  </main>
     
 </body>
 </html>

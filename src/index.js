@@ -1,14 +1,17 @@
 import '../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
 import './styles/main.scss';
 import { navToggler } from './js/main';
+import barba from '@barba/core';
 
-const selector = (s) => document.querySelector(s);
+barba.hooks.afterEnter( ( data ) => {
+    const selector = (s) => document.querySelector(s);
 
 
-selector(".theme-toggler").addEventListener('click', () => {
-    selector('body').classList.toggle('light');
+    selector(".theme-toggler").addEventListener('click', () => {
+        selector('body').classList.toggle('light');
+    });
+
+
+    
+    selector('.hamburger').addEventListener('click', navToggler)
 });
-
-
- 
-selector('.hamburger').addEventListener('click', navToggler)

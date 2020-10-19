@@ -1,5 +1,9 @@
 import barba from '@barba/core';
-import { homeAnimation, pageTransition } from './js/main';
+import { 
+  homeAnimation,
+  workAnimation, 
+  pageTransition 
+} from './js/main';
 
 function delay(n) {
   return new Promise((done) => {
@@ -8,26 +12,6 @@ function delay(n) {
     }, n);
   });
 }
-
-/*barba.init({
-  sync: true,
-  transitions: [
-    {
-      async leave() {
-        pageTransition();
-        await delay(1000);
-      },
-
-      async enter() {
-        animation();
-      },
-      async once() {
-        animation();
-      },
-    },
-  ],
-});
-*/
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -40,11 +24,13 @@ barba.init({
         pageTransition();
         await delay(1000);
         data.current.container.remove();
-    },
-    async beforeEnter(data) {
-      document.querySelector('.hamburger').classList.remove('is-active');
-    },
-    asy
+      },
+      async beforeEnter(data) {
+        document.querySelector('.hamburger').classList.remove('is-active');
+      },
+      // async beforeEnter(data) {
+      //   ScrollTrigger.getAll().forEach(t => t.kill());
+      // },
     },
   ],
 views: [
@@ -52,7 +38,13 @@ views: [
     namespace: 'home',
     async afterEnter() {
       homeAnimation();
-    },
+    }
+  }, 
+  {
+    namespace: 'work',
+    async afterEnter() {
+      workAnimation();
+    }
   },  
 ]
 });

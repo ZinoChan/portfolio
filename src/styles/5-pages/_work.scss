@@ -1,39 +1,70 @@
 .work{
     padding: 6rem 0;
-    .title{
-        margin-bottom: 4.5rem;
+    
 
-        h1{font-size: 5rem;}
+    .img-container{
+        background: $black;
+        margin-bottom: 4rem;
+        cursor: pointer;
+        .work-img{
+            border-radius: 20px;
+            height: 500px;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            &.jagaimo{background-image: url('../images/jagaimo.jpg');}
+            &.run{background-image: url('../images/run.jpg');}
+            //&.gohan{background-image: url('../images/gohan.jpg');}
 
-        h3{
-            font-size: 3rem;
-            position: relative;
-            &::after,
-            &::before{
-                content: "";
-                width: 60px;
-                height: 3px;
-                background-color: $main-color;
-                top: 50%;
-                transform: translateY(-50%);
-                position: absolute;
+            .img-overlay{
+                transition: all .3s linear;
+                clip-path: circle(0%);
+                background-color: rgba(0,0,0,.6);
+                padding: 0 2rem;
+                width: 100%;
+                height: 100%;
+
+                h4{
+                    font-size: 2.5rem; 
+                    transition: all .3s linear; 
+                    transform: translateY(-100px);
+                    opacity: 0;
+                    color: $white;
+                }
+
+                span{
+                    transition: all .3s linear;
+                    color: $white;
+                    font-size: 1.2rem;
+                    margin: 10px;
+                    background-color: $main-color;
+                    transform: scale(0);
+                }
             }
-
-            &::after{right:28%;}
-
-            &::before{left: 28%;}
+            &:hover{
+                .img-overlay{
+                    clip-path: circle(100%);
+                    transition: all .3s linear;
+                    h4{
+                        opacity: 1;
+                        transform: translateY(0);
+                        transition: all .3s linear;
+                        transition-delay: .3s;
+                    }
+                    span{
+                        transition: all .3s linear;
+                        transform: scale(1);
+                        transition-delay: .4s;
+                    }
+                }
+            }
         }
     }
 
-    .work-img{
-        height: 500px;
-        background: #000;
-        margin-bottom: 2rem;
-    }
-
+    
     .work-info{
         h2{
-            font-size: 2rem;
+            font-size: 4rem;
             transition: all .2s linear;
             margin-bottom: 3rem;
         }
@@ -41,15 +72,60 @@
         p{font-size: 1.6rem; margin-bottom: 2.5rem;}
 
         span{
-            display: block;
+            display: inline-block;
             font-size: 1.3rem;
             text-transform: capitalize;
+            position: relative;
+            margin-left: 63px;
+            margin-bottom: 2rem;
+            font-family: $nunito_Xbold;
+            transition: all .3s linear;
             &::before{
+                position: absolute;
+                left: -23px;
+                top: 50%;
+                transform: translateY(-50%);
                 content: "";
-                width: 40px;
+                width: 20px;
                 height: 3px;
                 background-color: $main-color;
+                transition: all .3s linear;
+            }
+            a{color: inherit;}
+
+            &:hover{
+                transition: all .3s linear;
+                margin-left: 80px;
+                &::before{
+                    left: -50px;
+                    transition: all .3s linear;
+                }
             }
         }
     }
+}
+
+@include responsive_max(450px){
+    .work-img{height: 300px!important;}
+}
+
+@include responsive_max(360px){
+   .title{
+       h1{font-size: 4rem!important}
+       h3{font-size: 2rem!important;}
+   }
+
+   .work-info{
+       h2{font-size: 3rem!important;}
+   }
+
+   .img-overlay{padding: 0 1rem!important;}
+}
+
+@include responsive_max(320px){
+    .img-overlay{
+        span{margin: 4px!important; font-size: 1rem!important;}
+    }
+
+    .work-img{height: 250px!important;}
 }

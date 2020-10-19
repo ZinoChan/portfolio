@@ -4,7 +4,8 @@ html{overflow-x: hidden; width: 100vw;}
 
 h1,
 h2,
-h3{
+h3,
+h4{
     font-family: $heading-font;
     color: inherit;
     line-height: 1;
@@ -39,4 +40,36 @@ margin: 0;}
     border-radius: 8px;
     padding: .5rem 1.6rem;
     font-size: 1.3rem;
+}
+
+.title{
+    margin-bottom: 4.5rem;
+
+    h1{font-size: 5rem;}
+
+    h3{
+        font-size: 3rem;
+        position: relative;
+        display: inline-block;
+        &::after,
+        &::before{
+            content: "";
+            width: 60px;
+            height: 3px;
+            background-color: $main-color;
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+        }
+
+        &::after{right:-66px;}
+
+        &::before{left: -66px;}
+    }
+}
+
+@include responsive_tab(){
+    .container-fluid{
+        padding: 0 2rem!important;
+    }
 }

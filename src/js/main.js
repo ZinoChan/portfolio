@@ -14,9 +14,13 @@ const homeAnimation = () => {
   gsap.from('.home-text p',{x: -100, opacity: 0, delay: 1, duration: .6});
 
   gsap.from('.home-text .btn',{x: 100, opacity: 0, delay: 1, duration: .6});
-
-
 };
+
+const workAnimation  = () => {
+  gsap.from('.title h1', {y: -100, opacity: 0, duration: .5, delay: 1});
+  gsap.from('.title h3', {y: 100, opacity: 0, duration: .5, delay: 1});
+  
+}
 
 function pageTransition() {
   const tl = gsap.timeline();
@@ -67,4 +71,4 @@ function navToggler (){
 }
  
 
-export { homeAnimation, pageTransition, navToggler };
+export { homeAnimation, workAnimation, pageTransition, navToggler };
