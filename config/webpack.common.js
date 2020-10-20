@@ -42,6 +42,13 @@ module.exports = {
       template: paths.src + '/about.html', 
       filename: 'about.html', 
     }),
+    new HtmlWebpackPlugin({
+      title: 'Webpack Test',
+      favicon: paths.static + '/favicon.png',
+      template: paths.src + '/contact.html', 
+      filename: 'contact.html', 
+    }),
+    
   ],
 
   module: {

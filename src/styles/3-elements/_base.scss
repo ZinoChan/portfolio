@@ -68,6 +68,29 @@ margin: 0;}
     }
 }
 
+.bubbles{
+    span{
+        display: inline-block;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        z-index: 1;
+    }
+
+    
+    .main-color{
+        background-color: $main-color;
+        top: 15%;
+        right: -50px;
+    }
+
+    .theme-bg{
+        bottom: -50px;
+        left: -20px;
+    }
+}
+
 @include responsive_tab(){
     .container-fluid{
         padding: 0 2rem!important;

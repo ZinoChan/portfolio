@@ -17,9 +17,24 @@ const homeAnimation = () => {
 };
 
 const workAnimation  = () => {
-  gsap.from('.title h1', {y: -100, opacity: 0, duration: .5, delay: 1});
-  gsap.from('.title h3', {y: 100, opacity: 0, duration: .5, delay: 1});
-  
+  gsap.from('h1', {y: -100, opacity: 0, duration: .5, delay: 1});
+  gsap.from('h3', {y: 100, opacity: 0, duration: .5, delay: 1});
+  gsap.from('.work-info', {x: -100, opacity: 0, duration: .5, delay: 1.3})
+  gsap.from('.img-container', {x: 100, opacity: 0, duration: .5, delay: 1.3})
+}
+
+const aboutAnimation = () => {
+  gsap.from('h1', {y: -100, opacity: 0, duration: .5, delay: 1});
+  gsap.from('h3', {y: 100, opacity: 0, duration: .5, delay: 1});
+  gsap.from('.about-text', {x: -100, opacity: 0, delay: 1.5, duration: .6});
+  gsap.from('.skills', {x: 100, opacity: 0, delay: 1.5, duration: .6});
+  gsap.from('.skills p', {x: -100, opacity: 0, delay: 1.6, duration: .6, stagger: .3});
+}
+
+const contactAnimation = () => {
+  gsap.from('h1', {y: -100, opacity: 0, duration: .5, delay: 1});
+  gsap.from('h3', {y: 100, opacity: 0, duration: .5, delay: 1});
+  gsap.from('.contact-info p', {y: -100, opacity: 0, delay: 1.6, duration: .6, stagger: .3});
 }
 
 function pageTransition() {
@@ -71,4 +86,11 @@ function navToggler (){
 }
  
 
-export { homeAnimation, workAnimation, pageTransition, navToggler };
+export { 
+  homeAnimation, 
+  workAnimation, 
+  pageTransition, 
+  navToggler,
+  aboutAnimation,
+  contactAnimation
+};

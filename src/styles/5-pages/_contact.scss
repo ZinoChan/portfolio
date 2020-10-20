@@ -1,0 +1,15 @@
+.contact{
+    padding: 7rem 0;
+
+    .contact-info{
+        p{font-size: 1.7rem;}
+        span{font-size: 1.7rem; margin-right: 2rem;}
+    }
+}
+
+@include responsive_max(360px){
+    .contact-info{
+        p{font-size: 1.4rem!important;}
+        span{font-size: 1.4rem!important;}
+    }
+}

@@ -3,7 +3,8 @@
     
 
     .img-container{
-        background: $black;
+        background: $main-color;
+        border-radius: 20px;
         margin-bottom: 4rem;
         cursor: pointer;
         .work-img{
@@ -14,7 +15,7 @@
             background-position: center center;
             &.jagaimo{background-image: url('../images/jagaimo.jpg');}
             &.run{background-image: url('../images/run.jpg');}
-            //&.gohan{background-image: url('../images/gohan.jpg');}
+            &.gohan{background-image: url('../images/gohan.jpg');}
 
             .img-overlay{
                 transition: all .3s linear;

@@ -42,30 +42,6 @@
     }
 
 
-
-    .bubbles{
-        span{
-            display: inline-block;
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            border-radius: 100%;
-            z-index: 1;
-        }
-
-        
-        .main-color{
-            background-color: $main-color;
-            top: 15%;
-            right: -50px;
-        }
-
-        .theme-bg{
-            bottom: -50px;
-            left: -20px;
-        }
-    }
-
     .social-nav{
         right: 0;
         top: 50%;

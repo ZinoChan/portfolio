@@ -2,7 +2,9 @@ import barba from '@barba/core';
 import { 
   homeAnimation,
   workAnimation, 
-  pageTransition 
+  pageTransition,
+  aboutAnimation,
+  contactAnimation 
 } from './js/main';
 
 function delay(n) {
@@ -15,6 +17,10 @@ function delay(n) {
 
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  
+
+
 barba.init({
   sync: true,
 
@@ -27,10 +33,7 @@ barba.init({
       },
       async beforeEnter(data) {
         document.querySelector('.hamburger').classList.remove('is-active');
-      },
-      // async beforeEnter(data) {
-      //   ScrollTrigger.getAll().forEach(t => t.kill());
-      // },
+      }
     },
   ],
 views: [
@@ -44,6 +47,18 @@ views: [
     namespace: 'work',
     async afterEnter() {
       workAnimation();
+    }
+  },
+  {
+    namespace: 'about',
+    async afterEnter() {
+      aboutAnimation();
+    }
+  }, 
+  {
+    namespace: 'contact',
+    async afterEnter() {
+     contactAnimation();
     }
   },  
 ]

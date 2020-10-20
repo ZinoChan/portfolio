@@ -10,8 +10,9 @@ barba.hooks.afterEnter( ( data ) => {
     selector(".theme-toggler").addEventListener('click', () => {
         selector('body').classList.toggle('light');
     });
+    selector('.hamburger').addEventListener('click', navToggler);
 
-
-    
-    selector('.hamburger').addEventListener('click', navToggler)
+    document.querySelectorAll('.nav-link').forEach(link => {
+		link.addEventListener('click', navToggler)
+	})
 });
