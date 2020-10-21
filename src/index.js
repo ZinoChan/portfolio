@@ -3,16 +3,8 @@ import './styles/main.scss';
 import { navToggler } from './js/main';
 import barba from '@barba/core';
 
-barba.hooks.afterEnter( ( data ) => {
-    const selector = (s) => document.querySelector(s);
-
-
-    selector(".theme-toggler").addEventListener('click', () => {
-        selector('body').classList.toggle('light');
-    });
-    selector('.hamburger').addEventListener('click', navToggler);
-
+barba.hooks.afterEnter( (data) => {
     document.querySelectorAll('.nav-link').forEach(link => {
-		link.addEventListener('click', navToggler)
-	})
+      link.addEventListener('click', navToggler)
+    });
 });

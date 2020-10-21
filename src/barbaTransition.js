@@ -1,10 +1,13 @@
 import barba from '@barba/core';
+import header from './components/header.html'
 import { 
   homeAnimation,
   workAnimation, 
   pageTransition,
   aboutAnimation,
-  contactAnimation 
+  contactAnimation, 
+  removePreloader,
+  navToggler
 } from './js/main';
 
 function delay(n) {
@@ -16,10 +19,33 @@ function delay(n) {
 }
 
 
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
 
+  removePreloader();
+
+  const selector = (s) => document.querySelector(s);
+  document.getElementById('header').innerHTML = header;
+  
+  selector(".theme-toggler").addEventListener('click', () => {
+      const body =  selector('body');
+      const icon = selector('.theme-toggler');
+     
+      if(body.classList.contains('dark')){
+        body.classList.remove('dark');
+        icon.innerHTML = '<i class="fas fa-moon"></i>'
+      }else{
+        body.classList.add('dark');
+        icon.innerHTML = '<i class="fas fa-sun"></i>'
+      }
+  });
+
+  selector('.hamburger').addEventListener('click', navToggler);
   
 
+  
 
 barba.init({
   sync: true,
@@ -29,11 +55,9 @@ barba.init({
       async leave(data) {
         pageTransition();
         await delay(1000);
-        data.current.container.remove();
+        //data.current.container.remove();
       },
-      async beforeEnter(data) {
-        document.querySelector('.hamburger').classList.remove('is-active');
-      }
+     
     },
   ],
 views: [

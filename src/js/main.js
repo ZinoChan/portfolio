@@ -84,6 +84,12 @@ function navToggler (){
     })
   }  
 }
+
+
+function removePreloader(){
+  gsap.to('.preloader svg', {y: "100vh", duration: .4, opacity: 0});
+  gsap.to('.preloader',{height: 0, duration: .3, delay: .4});
+}
  
 
 export { 
@@ -92,5 +98,6 @@ export {
   pageTransition, 
   navToggler,
   aboutAnimation,
-  contactAnimation
+  contactAnimation,
+  removePreloader
 };

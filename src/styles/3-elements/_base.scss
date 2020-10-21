@@ -91,6 +91,12 @@ margin: 0;}
     }
 }
 
+.theme-toggler{
+     font-size: 1.5rem;
+     i{display: inline-block; padding: .5rem 1rem;}
+     cursor: pointer;
+ }
+
 @include responsive_tab(){
     .container-fluid{
         padding: 0 2rem!important;
