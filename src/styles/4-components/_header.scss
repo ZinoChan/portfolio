@@ -1,6 +1,8 @@
 .header{
     z-index: 99;
-    position: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100vw;
     .logo{
         width: 100px;
@@ -38,4 +40,9 @@
             font-family: $nunito_Xbold;
         }
     }
+}
+
+
+@include responsive_max(450px){
+    .logo{width: 60px!important; height: 60px!important;}
 }
