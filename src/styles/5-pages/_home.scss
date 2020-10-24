@@ -28,6 +28,7 @@
             font-size: 1.6rem;
             position: relative;
             padding-left: 20px;
+            z-index: 2;
             &::before{
                 border-radius: 10px;
                 content: "";
@@ -60,6 +61,10 @@
     }
 }
 
+
+@include responsive_mobile(){
+    .home-text p{font-size: 1.4rem!important;}
+}
 
 @include responsive_max(450px){
     html {font-size: 14px;}

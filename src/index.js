@@ -4,7 +4,7 @@ import { navToggler } from './js/main';
 import barba from '@barba/core';
 
 barba.hooks.afterEnter( (data) => {
-    document.querySelectorAll('.nav-link').forEach(link => {
+    document.querySelectorAll('.header .nav-link').forEach(link => {
       link.addEventListener('click', navToggler)
     });
 });
